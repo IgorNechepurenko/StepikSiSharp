@@ -175,21 +175,17 @@
         // else {Console.WriteLine("чот не то");
         // }
 
-        // Console.WriteLine("Введите число 1:");
-        // var a = Console.ReadLine();
-        // Console.WriteLine("Введите число 2:");
-        // var b = Console.ReadLine();
-        // int a2 = Convert.ToInt32(a);
-        // int b2 = Convert.ToInt32(b);
-        // bool c = a2 <= b2;
-        // Console.WriteLine($"{a2} меньше или равно {b2} - {c}");
+        Console.WriteLine("Введите число 1:");
+        var a = Console.ReadLine();
+        Console.WriteLine("Введите число 2:");
+        var b = Console.ReadLine();
+        int a2 = Convert.ToInt32(a);
+        int b2 = Convert.ToInt32(b);
+        bool c = a2 <= b2;
+        Console.WriteLine($"{a2} меньше или равно {b2} - {c}");
 
  
- int a = Convert.ToInt32.(Console.ReadLine());
- int b = Convert.ToInt32.(Console.ReadLine());
- if (a>b) Console.Write(a);
+ 
 
- else Console.Write(b);
 
- Проверка связи
        
