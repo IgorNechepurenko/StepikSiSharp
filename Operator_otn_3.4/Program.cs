@@ -175,14 +175,21 @@
         // else {Console.WriteLine("чот не то");
         // }
 
-        Console.WriteLine("Введите число 1:");
-        var a = Console.ReadLine();
-        Console.WriteLine("Введите число 2:");
-        var b = Console.ReadLine();
-        int a2 = Convert.ToInt32(a);
-        int b2 = Convert.ToInt32(b);
-        bool c = a2 <= b2;
-        Console.WriteLine($"{a2} меньше или равно {b2} - {c}");
+        // Console.WriteLine("Введите число 1:");
+        // var a = Console.ReadLine();
+        // Console.WriteLine("Введите число 2:");
+        // var b = Console.ReadLine();
+        // int a2 = Convert.ToInt32(a);
+        // int b2 = Convert.ToInt32(b);
+        // bool c = a2 <= b2;
+        // Console.WriteLine($"{a2} меньше или равно {b2} - {c}");
+
+ Random run = new Random();
+ double x = run.Next(0, 30);
+ double c = run.Next(0, 30);
+ Console.WriteLine(x);
+ Console.WriteLine(c);
+ Console.WriteLine($"сумма двух случайных чисел: {x+c}");
 
  
  
