@@ -123,3 +123,63 @@
 // int b = int.Parse(Console.ReadLine());
 // Console.WriteLine(--a*b);
 
+// Console.WriteLine("Введите число 1:");
+// int a = int.Parse(Console.WriteLine());
+// Console.WriteLine("Введите число 2:");
+// int b = int.Parse(Console.WriteLine());
+// int result a + b;
+// Console.WriteLine(a + " меньше или равно " + b + " - " + result);
+
+// int a = 5;
+// int b = 4;
+// Console.WriteLine(a == b);
+
+        // int a;
+        // int b;
+        // Console.WriteLine("Введите число 1:");
+        // a = Convert.ToInt32(Console.ReadLine());
+        // Console.WriteLine("Введите число 2:");
+        // b = Convert.ToInt32(Console.ReadLine());
+        // bool c = a <= b;
+        // Console.WriteLine($"{a} меньше или равно {b} - {c}");
+
+// Console.WriteLine("Введите число 1:");
+// int a = int.Parse(Console.ReadLine());
+// Console.WriteLine("Введите число 2:");
+// int b = int.Parse(Console.ReadLine());
+// Console.Write($"{a} меньше или равно {b} - {a <= b}");
+
+        // Console.WriteLine("Введите число 1:");
+        // int a = int.Parse(Console.ReadLine());
+        // Console.WriteLine("Введите число 2:");
+        // int b = int.Parse(Console.ReadLine());
+        // Console.WriteLine($"{a} меньше или равно {b} - {a <= b}");
+
+// Console.WriteLine("Введите число 1:");
+// var a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число 2:");
+// var b = Convert.ToInt32(Console.ReadLine());
+// bool c = a<=b;
+// // Console.WriteLine("Введите число 1:");
+// // Console.WriteLine("Введите число 2:"); 
+// Console.WriteLine($"{a} меньше или равно {b}" + " - " + c);    
+  
+        //  Console.WriteLine("Введите число 1:");
+        // int a = int.Parse(Console.ReadLine());
+        // Console.WriteLine("Введите число 2:");
+        // int b = int.Parse(Console.ReadLine());
+        // bool c = a<=b;
+        // if (a<=b)
+        // {    Console.WriteLine($"{a} меньше или равно {b} - {c}");
+        // }
+        // else {Console.WriteLine("чот не то");
+        // }
+
+        // Console.WriteLine("Введите число 1:");
+        // var a = Console.ReadLine();
+        // Console.WriteLine("Введите число 2:");
+        // var b = Console.ReadLine();
+        // int a2 = Convert.ToInt32(a);
+        // int b2 = Convert.ToInt32(b);
+        // bool c = a2 <= b2;
+        // Console.WriteLine($"{a2} меньше или равно {b2} - {c}");
