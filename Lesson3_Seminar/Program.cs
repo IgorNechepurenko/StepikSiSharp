@@ -91,10 +91,16 @@
 //     i++;
 // }
 
-int n;
-n = Convert.ToInt32(Console.ReadLine());
-for (int i = 1; i <= n; i++){
-    Console.WriteLine(i * i);
-}
+// int n;
+// n = Convert.ToInt32(Console.ReadLine());
+// for (int i = 1; i <= n; i++){
+//     Console.WriteLine(i * i);
+// }
 
 
+ Random run = new Random();
+ double x = run.Next(0, 30);
+ double c = run.Next(0, 30);
+ Console.WriteLine(x);
+ Console.WriteLine(c);
+ Console.WriteLine($"сумма двух случайных чисел: {x+c}");
