@@ -9,15 +9,15 @@
 // Console.WriteLine(rubles + " рублей = " + RubToDollar + " - " + "доллар");
 // Console.WriteLine(rubles + " рублей = " + RubToEuro + " - " + "евро");
 
-// // Подсчитать площадь трапеции: 
+// Подсчитать площадь трапеции: 
 
-// // Console.WriteLine("Введите длинну верхнего основания");
-// // double a = Convert.ToDouble(Console.ReadLine());
-// // Console.WriteLine("Введите длинну нижнего основания");
-// // double b = Convert.ToDouble(Console.ReadLine());
-// // Console.WriteLine("Введите высоту");
-// // double h = Convert.ToDouble(Console.ReadLine());
-// // var s = (a+b) / 2 * h;
+// Console.WriteLine("Введите длинну верхнего основания");
+// double a = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите длинну нижнего основания");
+// double b = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите высоту");
+// double h = Convert.ToDouble(Console.ReadLine());
+// var s = (a+b) / 2 * h;
 // Console.WriteLine("Площадь трапеции = " + s);
 
        // Определить какое число больше
@@ -54,3 +54,15 @@
 //     max = num2;
 //     }
 // Console.WriteLine("Максимальное число: " + max);
+
+// var i = 0;
+// while(i<5){
+//     Console.WriteLine("Привет Игорёша! ");
+//     i++;
+//  }
+
+// for(var i = 0, i < 4, i++) {
+//     Console.WriteLine("Привет Игорёша! ");
+//     }
+
+
