@@ -67,12 +67,12 @@
 
 // Посчитать числа от одного до N
 
-Console.WriteLine("Пожалуйста введите число");
-var n = Convert.ToInt32(Console.ReadLine());
-var sum = 0;
-for (var i = 0; i <= n; i++) {
-       sum = sum + i;
-      Console.WriteLine(i + " " + sum);}
+// Console.WriteLine("Пожалуйста введите число");
+// var n = Convert.ToInt32(Console.ReadLine());
+// var sum = 0;
+// for (var i = 0; i <= n; i++) {
+//        sum = sum + i;
+//       Console.WriteLine(i + " " + sum);}
 
 // Доработка если входящие данные не число или отрицательное число
 
