@@ -20,7 +20,7 @@
 // var s = (a+b) / 2 * h;
 // Console.WriteLine("Площадь трапеции = " + s);
 
-       // Определить какое число больше
+// Определить какое число больше
 
 // Console.WriteLine("Введите первое число: ");
 // int num1 = Convert.ToInt32(Console.ReadLine());
@@ -68,7 +68,25 @@
 // Посчитать числа от одного до N
 
 Console.WriteLine("Пожалуйста введите число");
-int n = Convert.ToInt32(Console.ReadLine());
-for (n = 0; i<=n; i++){
-       Console.WriteLine(i)
-}
+var n = Convert.ToInt32(Console.ReadLine());
+var sum = 0;
+for (var i = 0; i <= n; i++) {
+       sum = sum + i;
+      Console.WriteLine(i + " " + sum);}
+
+// Доработка если входящие данные не число или отрицательное число
+
+
+// Console.WriteLine("Пожалуйста введите число");
+// var n = Convert.ToInt32(Console.ReadLine());
+// var sum = 0;
+// if (n < 0 ){
+//        Console.WriteLine("Нужно ввести положительное число!");
+//      }
+//      else{
+//          for (var i = 0; i <= n; i++) {
+//                 sum = sum + i;
+//          }
+// Console.WriteLine(sum);
+// }
+
