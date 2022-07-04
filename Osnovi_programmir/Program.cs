@@ -61,8 +61,14 @@
 //     i++;
 //  }
 
-// for(var i = 0, i < 4, i++) {
+// for(var i = 0; i < 4; i++) {
 //     Console.WriteLine("Привет Игорёша! ");
 //     }
 
+// Посчитать числа от одного до N
 
+Console.WriteLine("Пожалуйста введите число");
+int n = Convert.ToInt32(Console.ReadLine());
+for (n = 0; i<=n; i++){
+       Console.WriteLine(i)
+}
