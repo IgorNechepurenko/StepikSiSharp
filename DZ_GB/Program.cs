@@ -62,28 +62,105 @@
 
     //  Ввести в массив 8 чисел от 0 до 1
 
-int [] = new int [8];
-void FillAray(int[] collection)
-{
-int lenght = collection.Lengt;
-int index = 0;
-    while (index<leght)
-    {
-        collection[index] = new Random().Next(0, 2);
-        index++;
-    }
-void PrintArray(int[]col)
-{
-    int count = col.Lenght;
-    int position = 0;
-    while (position<count)
-    {
-        Console.WriteLine(col[position]);
-        position++;
-    }
-}
-}
-FillAray(array);
-PrintArray(array);
+// int [] = new int [8];
+// void FillAray(int[] collection)
+// {
+// int lenght = collection.Lengt;
+// int index = 0;
+//     while (index<leght)
+//     {
+//         collection[index] = new Random().Next(0, 2);
+//         index++;
+//     }
+// void PrintArray(int[]col)
+// {
+//     int count = col.Lenght;
+//     int position = 0;
+//     while (position<count)
+//     {
+//         Console.WriteLine(col[position]);
+//         position++;
+//     }
+// }
+// }
+// FillAray(array);
+// PrintArray(array);
    
-1.17
+// int[] array = new int[4];
+// for (int i = 0; i < 4; i++)
+// {
+//     array[i] = new Random().Next(-100, 101);
+// }
+// Console.WriteLine("[" + string.Join(", ", array) + "]");
+// for (int i = 0; i < 4; i++)
+// {
+//     array[i] = array[i] * (-1);
+// }
+// Console.WriteLine("[" + string.Join(", ", array) + "]");
+
+// int[] array = new int[5];
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = Convert.ToInt32(Console.ReadLine());
+// }
+
+// int[] array = new int[5];
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = Convert.ToInt32(Console.ReadLine());
+// }
+// Console.WriteLine("[" + string.Join(", ", array) + "]");
+// Console.WriteLine("Введи число: ");
+// int n;
+// bool log = false;
+// n = Convert.ToInt32(Console.ReadLine());
+// for (int i = 0; i < array.Length; i++)
+// {
+//     if (n == array[i])
+//     {
+//         log = true;
+//         break;
+//     }
+// }
+// if (log)
+// {
+//     Console.WriteLine("yes");
+// }
+// else
+// {
+//     Console.WriteLine("no");
+// }
+
+// int n;
+// Console.WriteLine("Напишите кол-во чисел: ");
+// n = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[n];
+// Console.WriteLine("Напишите числа: ");
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = Convert.ToInt32(Console.ReadLine());
+// }
+// for (int i = 0; i < array.Length / 2 + 1; i++)
+// {
+//     Console.WriteLine(array[i] * array[array.Length - i - 1]);
+// }
+
+
+// int n;
+// Console.WriteLine("Напишите кол-во чисел: ");
+// n = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[n];
+// Console.WriteLine("Напишите числа: ");
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = Convert.ToInt32(Console.ReadLine());
+// }
+// int len;
+// if (n % 2 == 0){
+//     len = n / 2 - 1;
+// }
+// else {len = n / 2;}
+// for (int i = 0; i <= len; i++)
+// {
+//     Console.WriteLine(array[i] * array[array.Length - i - 1]);
+// }
