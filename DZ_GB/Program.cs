@@ -166,16 +166,184 @@
 // }
 
 
-int a = 1;
-int b = 2;
-int c = 6;
-int d = 8;
-int e = 4;
-int max = a;
-if (a > max ) max = a;
-if (b > max ) max = b;
-if (c > max ) max = c;
-if (d > max ) max = d;
-if (e > max ) max = e;
-Console.Write("max = ");
-Console.WriteLine(max);
+// int a = 1;
+// int b = 2;
+// int c = 6;
+// int d = 8;
+// int e = 4;
+// int max = a;
+// if (a > max ) max = a;
+// if (b > max ) max = b;
+// if (c > max ) max = c;
+// if (d > max ) max = d;
+// if (e > max ) max = e;
+// Console.Write("max = ");
+// Console.WriteLine(max);
+
+//                              Задача1
+// int[, ] CreateMatr(int n, int m)
+// {
+//     int[, ] matrix = new int[n ,m];
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = new Random().Next(1, 100);
+//         }
+//     }
+//     return matrix;
+// }
+
+
+// void PrintMatr(int[, ] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write(matrix[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// PrintMatr(CreateMatr(3, 4));
+
+// // Решение 2
+
+// int[, ] CreateMatr(int n, int m)
+// {
+//     int[, ] matrix = new int[n ,m];
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = Convert.ToInt32(Console.ReadLine());
+//         }
+//     }
+//     return matrix;
+// }
+
+
+// void PrintMatr(int[, ] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write(matrix[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// int n = Convert.ToInt32(Console.ReadLine());
+// int m = Convert.ToInt32(Console.ReadLine());
+// PrintMatr(CreateMatr(n, m));
+
+// int[, ] CreateMatr(int n, int m)
+// {
+//     int[, ] matrix = new int[n ,m];
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = i + j;
+//         }
+//     }
+//     return matrix;
+// }
+
+
+// void PrintMatr(int[, ] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write(matrix[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// int n = Convert.ToInt32(Console.ReadLine());
+// int m = Convert.ToInt32(Console.ReadLine());
+// PrintMatr(CreateMatr(n, m));
+
+//                          
+//                                 Задача01
+
+// int[, ] CreateMatr(int n, int m)
+// {
+//     int[, ] matrix = new int[n ,m];
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = new Random().Next(1, 100);
+//             Console.Write(matrix[i, j] + " ");
+//             //matrix[i, j] = Convert.ToInt32(Console.ReadLine());
+//         }
+//         Console.WriteLine();
+//     }
+//     return matrix;
+// }
+
+
+// void PrintMatr(int[, ] matrix)
+// {
+//     Console.WriteLine();
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             if (i % 2 == 1 && j % 2 == 1)
+//                 matrix[i, j] = matrix[i, j] * matrix[i, j];
+
+//             Console.Write(matrix[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// int n = Convert.ToInt32(Console.ReadLine());
+// int m = Convert.ToInt32(Console.ReadLine());
+// PrintMatr(CreateMatr(n, m));
+
+int[, ] CreateMatr(int n, int m)
+{
+    int[, ] matrix = new int[n ,m];
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(1, 100);
+            //matrix[i, j] = Convert.ToInt32(Console.ReadLine());
+            Console.Write(matrix[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    return matrix;
+}
+
+
+void PrintMatr(int[, ] matrix)
+{
+    Console.WriteLine();
+    int DiagonSum = 0;
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (i == j)
+                DiagonSum = DiagonSum + matrix[i, j];
+        }
+    }
+    Console.WriteLine(DiagonSum);
+}
+
+int n = Convert.ToInt32(Console.ReadLine());
+int m = Convert.ToInt32(Console.ReadLine());
+PrintMatr(CreateMatr(n, m));  //double?
+
