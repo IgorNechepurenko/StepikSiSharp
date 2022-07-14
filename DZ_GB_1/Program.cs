@@ -69,31 +69,41 @@
 // Напишите программу, которая принимает на вход цифру, обозначающую 
 // день недели, и проверяет, является ли этот день выходным.
 
-Console.WriteLine("Введи цифру, обозначающую день недели: ");
-int day = Convert.ToInt32(Console.ReadLine());
-n(day);
-void n(int day) {
-  if (day == 6 || day == 7) {
-  Console.WriteLine("Цифра: " + day + " - это выходной день!");
+// Console.WriteLine("Введи цифру, обозначающую день недели: ");
+// int day = Convert.ToInt32(Console.ReadLine());
+// n(day);
+// void n(int day) {
+//   if (day == 6 || day == 7) {
+//   Console.WriteLine("Цифра: " + day + " - это выходной день!");
+//   }
+//   else if (day < 1 || day > 7) {
+//     Console.WriteLine("Попробуй ещё раз! Нет такого дня недели");
+//   }
+//   else Console.WriteLine("Цифра: " + day + " - это рабочий день :(");
+// }
+
+// Напишите программу, которая принимает на вход пятизначное число и проверяет,
+// является ли оно палиндромом.
+
+Console.Write("Введи пятизначное число: ");
+string? number = Console.ReadLine();
+
+void num(string number){
+  if (number[0]==number[4] || number[1]==number[3]){
+    Console.WriteLine("Число: " +number + " палиндром.");
   }
-  else if (day < 1 || day > 7) {
-    Console.WriteLine("Попробуй ещё раз! Нет такого дня недели");
-  }
-  else Console.WriteLine("Цифра: " + day + " - это рабочий день :(");
+  else Console.WriteLine("Число: " +number + " не палиндром.");
 }
 
-// CheckingTheDayOfTheWeek(day);
+if (number!.Length == 5){
+  num(number);
+}
+else Console.WriteLine("Введи правильное число!");
 
 
 
-// Console.Write("Введи число: ");
-// int anyNumber = Convert.ToInt32(Console.ReadLine());
-// string anyNumberText = Convert.ToString(anyNumber);
-// if (anyNumberText.Length > 2){
-//   Console.WriteLine("третья цифра -> " + anyNumberText[2]);
-// }
-// else {
-//   Console.WriteLine("-> третьей цифры нет");
-// }
+
+
+
 
 
