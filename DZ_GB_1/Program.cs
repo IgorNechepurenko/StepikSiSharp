@@ -118,31 +118,70 @@
 // Напишите программу, которая принимает на вход число (N) и 
 // выдаёт таблицу кубов чисел от 1 до N.
 
-Console.Write("Введите число: ");
-int cube = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число: ");
+// int cube = Convert.ToInt32(Console.ReadLine());
 
-void Cube(int[] cube){
-  int counter = 0;
-  int length = cube.Length;
-  while (counter <  length){
-    cube[counter] = Convert.ToInt32(Math.Pow(counter, 3));
-    counter++;
-  }
-}
-void PrintArry(int[] coll){
-  int count = coll.Length;
-  int index = 1;
-  while(index < count){
-    Console.Write(coll[index]+ " ");
-    index++;
-  }
-} 
-int[] arry = new int[cube+1];
-Cube(arry);
-PrintArry(arry);
+// void Cube(int[] cube){
+//   int counter = 0;
+//   int length = cube.Length;
+//   while (counter <  length){
+//     cube[counter] = Convert.ToInt32(Math.Pow(counter, 3));
+//     counter++;
+//   }
+// }
+// void PrintArry(int[] coll){
+//   int count = coll.Length;
+//   int index = 1;
+//   while(index < count){
+//     Console.Write(coll[index]+ " ");
+//     index++;
+//   }
+// } 
+// int[] arry = new int[cube+1];
+// Cube(arry);
+// PrintArry(arry);
 
+//Напишите цикл, который принимает на вход два числа (A и B) 
+// и возводит число A в натуральную степень B.
 
+// Console.Write("Введите число A: ");
+// int a = Convert.ToInt16(Console.ReadLine());
+// Console.Write("Введите число B: ");
+// int b = Convert.ToInt16(Console.ReadLine());
+// int C = a;
+// for (int i = 1; i < b; i++)
+//      C = C * a;
+// Console.WriteLine("Число: "+a+" в степени " +b+ " равно: " + C);
 
+// Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+// Console.Write("Введите число: ");
+// int i = Convert.ToInt32(Console.ReadLine());
+// int sum = 0;
+// while (i > 0)
+// {
+// int b = i % 10;
+// i = i / 10;
+// sum = sum + b;
+// }
+// Console.WriteLine($"Cумма всех цифр в числе равна: {sum}");
+
+// Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+// int [] num = new int[8];
+// Console.Write("[");
+
+// for (int i = 0; i < num.Length; i++)
+//  {
+//     num [i] = new Random().Next(-99, 99);
+//     Console.Write(" " + Method (i) + " ");
+//  }
+// Console.Write("]");
+
+// int Method (int a)
+// {
+//     return num[a];
+// }
 
 
 
