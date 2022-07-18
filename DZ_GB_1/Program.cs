@@ -186,34 +186,37 @@
 // Задайте массив заполненный случайными положительными трёхзначными числами.
 // Напишите программу, которая покажет количество чётных чисел в массиве.
 
-Console.WriteLine("Введите размер массива");
+Console.Write("Введите размер массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
-int[] numbers = new int[size];
-FillArrayRandomNumbers(numbers);
-Console.WriteLine("Вот наш массив: ");
-PrintArray(numbers);
+int[] num = new int[size];
+FillArrayRandomNumbers(num);
+Console.WriteLine("В массиве: ");
+PrintArray(num);
 int count = 0;
 
-for (int z = 0; z < numbers.Length; z++)
-if (numbers[z] % 2 == 0)
-count++;
-
-Console.WriteLine($"всего {numbers.Length} чисел, {count} из них чётные");
-
-void FillArrayRandomNumbers(int[] numbers)
+for (int a = 0; a < num.Length; a++)
 {
-    for(int i = 0; i < numbers.Length; i++)
+    if (num[a] % 2 == 0)
+        count++;
+}
+
+Console.WriteLine($"В массиве {num.Length} чисел, {count}  чётных");
+
+void FillArrayRandomNumbers(int[] num)
+{
+    for(int i = 0; i < num.Length; i++)
     {
-        numbers[i] = new Random().Next(100,1000);
+        num[i] = new Random().Next(100,1000);
     }
 }
-void PrintArray(int[] numbers)
+void PrintArray(int[] num)
 {
     Console.Write("[ ");
-    for(int i = 0; i < numbers.Length; i++)
+    for(int i = 0; i < num.Length; i++)
     {
-        Console.Write(numbers[i] + " ");
+        Console.Write(num[i] + " ");
     }
     Console.Write("]");
     Console.WriteLine();
 }
+
