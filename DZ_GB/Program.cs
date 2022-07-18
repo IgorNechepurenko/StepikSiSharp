@@ -311,39 +311,269 @@
 // int m = Convert.ToInt32(Console.ReadLine());
 // PrintMatr(CreateMatr(n, m));
 
-int[, ] CreateMatr(int n, int m)
-{
-    int[, ] matrix = new int[n ,m];
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            matrix[i, j] = new Random().Next(1, 100);
-            //matrix[i, j] = Convert.ToInt32(Console.ReadLine());
-            Console.Write(matrix[i, j] + " ");
-        }
-        Console.WriteLine();
-    }
-    return matrix;
-}
+// int[, ] CreateMatr(int n, int m)
+// {
+//     int[, ] matrix = new int[n ,m];
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = new Random().Next(1, 100);
+//             //matrix[i, j] = Convert.ToInt32(Console.ReadLine());
+//             Console.Write(matrix[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     return matrix;
+// }
 
 
-void PrintMatr(int[, ] matrix)
-{
-    Console.WriteLine();
-    int DiagonSum = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (i == j)
-                DiagonSum = DiagonSum + matrix[i, j];
-        }
-    }
-    Console.WriteLine(DiagonSum);
-}
+// void PrintMatr(int[, ] matrix)
+// {
+//     Console.WriteLine();
+//     int DiagonSum = 0;
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             if (i == j)
+//                 DiagonSum = DiagonSum + matrix[i, j];
+//         }
+//     }
+//     Console.WriteLine(DiagonSum);
+// }
 
-int n = Convert.ToInt32(Console.ReadLine());
-int m = Convert.ToInt32(Console.ReadLine());
-PrintMatr(CreateMatr(n, m));  //double?
+// int n = Convert.ToInt32(Console.ReadLine());
+// int m = Convert.ToInt32(Console.ReadLine());
+// PrintMatr(CreateMatr(n, m));  //double?
 
+// 47 Задача 
+// int n = Convert.ToInt32(Console.ReadLine());
+// int m = Convert.ToInt32(Console.ReadLine());
+// double[,] a = new double[n, m];
+// Random random = new Random();
+// for (int i = 0; i < n; i++)
+// {
+//     for (int j = 0; j < m; j++)
+//     {
+//         a[i, j] = random.NextDouble() * 100;
+//         Console.Write("{0,6:F2}", a[i, j]);
+//     }
+//     Console.WriteLine();
+// }
+
+
+// 50
+// int[, ] CreateMatrix(int[, ] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             int x = Convert.ToInt32(Console.ReadLine());
+//             matrix[i , j] = x;
+//         }
+//     }
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write(matrix[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+
+//     return matrix;
+// }
+
+
+// void CheckMatrix(int i, int j, int[, ] matrix)
+// {
+//     if (i < matrix.GetLength(0) && j < matrix.GetLength(1) && i >= 0 && j >= 0)
+//         Console.WriteLine(matrix[i, j]);
+//     else
+//         Console.WriteLine("Ты ошибся");
+// }
+
+// int[, ] matrix = new int[4, 4];
+// matrix = CreateMatrix(matrix);
+// Console.WriteLine("Введите координаты: ");
+// int i = Convert.ToInt32(Console.ReadLine());
+// int j = Convert.ToInt32(Console.ReadLine());
+// CheckMatrix(i, j, matrix);
+
+// 52
+// int[, ] CreateMatrix(int[, ] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             //int x = Convert.ToInt32(Console.ReadLine());
+//             int x = new Random().Next(1, 1000);
+//             matrix[i , j] = x;
+//         }
+//     }
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write(matrix[i, j] + "\t");
+//         }
+//         Console.WriteLine();
+//     }
+
+//     return matrix;
+// }
+
+
+// void AvgMatrix(int[, ] matrix)
+// {
+//     Console.WriteLine();
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         double avg = 0;
+//         for(int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             avg = avg + matrix[j, i];
+//         }
+//         Console.WriteLine(i + 1 + " столбец: " + avg/matrix.GetLength(0));
+//     }
+// }
+
+// int[, ] matrix = new int[4, 4];
+// matrix = CreateMatrix(matrix);
+// AvgMatrix(matrix);
+
+// Задача по семинару от статистов
+
+// void AvgMatrix(int[, ] matrix)
+// {
+//     Console.WriteLine();
+//     int x;
+//     for (int i = 0; i < matrix.GetLength(1); i++)
+//     {
+//         x = matrix[0, i];
+//         matrix[0, i] = matrix[matrix.GetLength(0) - 1, i];
+//         matrix[matrix.GetLength(0) - 1, i] = x;
+//     }
+    
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write(matrix[i, j] + "\t");
+//         }
+//         Console.WriteLine();
+//     }
+
+// }
+
+// void AvgMatrix(int[, ] matrix)
+// {
+//     Console.WriteLine();
+//     int x;
+//     if (matrix.GetLength(0) == matrix.GetLength(1))
+//     {
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < matrix.GetLength(1); j++)
+//             {
+//                 if (i < j)
+//                 {
+//                     x = matrix[i, j];
+//                     matrix[i, j] = matrix[j, i];
+//                     matrix[j, i] = x;
+//                 }
+//             }
+//         }
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < matrix.GetLength(1); j++)
+//             {
+//                 Console.Write(matrix[i, j] + "\t");
+//             }
+//             Console.WriteLine();
+//         }
+//     }
+//     else
+//         Console.WriteLine("Такое невозможно!");
+
+// }
+
+//            Задача от статистов 
+// void AvgMatrix(int[, ] matrix)
+// {
+//     Console.WriteLine();
+//     int[] array = new int[matrix.GetLength(0) * matrix.GetLength(1)];
+//     int k = 0;
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             array[k] = matrix[i, j];
+//             k++;
+//         }
+//     }
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         int count = 1;
+//         for (int j = 0; j < array.Length; j++)
+//         {
+//             if(array[i] == array[j] && i != j)
+//                 count++;
+//         }
+//         Console.WriteLine(array[i] + " встречается " + count + " раз");
+//     }
+
+// }
+
+    //  47 Задача
+// void AvgMatrix(int[, ] matrix)
+// {
+//     Console.WriteLine();
+//     int minrow = 1000;
+//     int kmin = 0;
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         int sumrow = 0;
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             sumrow = sumrow + matrix[i, j];
+//         }
+//         if (sumrow < minrow)
+//         {
+//             minrow = sumrow;
+//             kmin = i + 1;
+//         }
+//     }
+//     Console.WriteLine(minrow + " " + kmin);
+
+// }
+
+// double[,] CreateMatr(int n, int m)
+// {
+//     Random random = new Random();
+//     double[,] matrix = new double[n, m];
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = random.NextDouble() * 100;
+//         }
+//     }
+//     return matrix;
+// }
+
+// void PrintMatr(double[, ] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write("{0: 00.000}", matrix[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// PrintMatr(CreateMatr(3, 4));
