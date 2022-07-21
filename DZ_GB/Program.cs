@@ -577,3 +577,123 @@
 //     }
 // }
 // PrintMatr(CreateMatr(3, 4));
+
+
+// int[,] CreateArrayFirst(int m, int n)
+// {
+//     int[,] matrix1 = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             matrix1[i, j] = new Random().Next(1, 10);
+//             Console.Write(matrix1[i, j] + "\t");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+//     return matrix1;
+
+// }
+// int[,] CreateArraySecond(int m, int n)
+// {
+//     int[,] matrix2 = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             matrix2[i, j] = new Random().Next(1, 10);
+//             Console.Write(matrix2[i, j] + "\t");
+//         }
+//         Console.WriteLine();
+//     }
+//     return matrix2;
+// }
+
+// void CheckMatrix(int[,] matrix1, int[,] matrix2)
+// {
+//     Console.WriteLine();
+//     int[,] result = new int[matrix1.GetLength(0), matrix1.GetLength(1)];
+//     for (int i = 0; i < matrix1.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < matrix1.GetLength(1); j++)
+//         {
+//             result[i, j] = matrix1[i, j] * matrix2[i, j];
+//             Console.Write(result[i, j] + " \t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// CheckMatrix(CreateArrayFirst(4, 4), CreateArraySecond(4, 4));
+
+// int f(int n)
+// {
+//     Console.Write(n + " ");
+//     if (n == 1)
+//         return 1;
+//     return f(n + 1);
+// }
+
+// int n = 10;
+// f(n);
+
+// void f(int n)
+// {
+//     if (n != 0)
+//     {
+//         f(n - 1);
+//         Console.Write(n + " ");
+//     }
+// }
+
+// int n = 10;
+// f(n);
+
+// void f(int n, int m)
+// {
+//     if (n != (m - 1))
+//     {
+//         f(n - 1, m);
+//         Console.Write(n + " ");
+//     }
+// }
+
+// int n = 10; //вводит ползователь строку
+// int m = 3; // вводит пользователь строку
+// f(n, m);
+
+
+// void f(int n = 10, int m = 3) // уже заранее ввели данные
+// {
+//     if (n != (m - 1))
+//     {
+//         f(n - 1, m);
+//         Console.Write(n + " ");
+//     }
+// }
+
+// f();
+
+
+
+// int f(int n)
+// {
+//     if (n == 0)
+//         return 0;
+//     return f(n / 10) + n % 10;
+// }
+// int n = 546; //Convert.ToInt32(Console.ReadLine()); //- если пользователь сам вводит цифры
+
+// Console.Write(f(n));
+
+int f(int a, int b)
+{
+    if (b == 0)
+        return 1;
+    return f(a, b - 1) * a;
+}
+int a = Convert.ToInt32(Console.ReadLine());
+int b = Convert.ToInt32(Console.ReadLine());
+Console.Write(f(a, b));
+
