@@ -14,3 +14,13 @@
 // //   b++;
 //  Console.WriteLine($"{b} * {2} = {b * 2}");
 // }
+
+
+Console.Write("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 0; i <=a ; i++)
+
+    {
+        Console.Write(i + " ");
+    }
