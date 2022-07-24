@@ -6,7 +6,7 @@
 // Console.Write("Введите размер массива: ");
 // int size = Convert.ToInt32(Console.ReadLine());
 // int[] num = new int[size];
-// FillArrayRandomNumbers(num);
+// FillArrayRandomnum(num);
 // Console.WriteLine("В массиве: ");
 // PrintArray(num);
 // int count = 0;
@@ -19,7 +19,7 @@
 
 // Console.WriteLine($"В массиве {num.Length} чисел, {count}  чётных");
 
-// void FillArrayRandomNumbers(int[] num)
+// void FillArrayRandomnum(int[] num)
 // {
 //     for(int i = 0; i < num.Length; i++)
 //     {
@@ -44,7 +44,7 @@
 // Console.Write("Введите размер массива_");
 // int a = Convert.ToInt32(Console.ReadLine());
 // int[] num = new int[a];
-// FillArrayRandomNumbers(num);
+// FillArrayRandomnum(num);
 // Console.WriteLine("Массив: ");
 // PrintArray(num);
 // int sum = 0;
@@ -54,7 +54,7 @@
 
 //     Console.WriteLine($"Всего {num.Length} чисел, сумма элементов на нечётных позициях: {sum}");
 
-// void FillArrayRandomNumbers(int[] num)
+// void FillArrayRandomnum(int[] num)
 // {
 //     for(int i = 0; i < num.Length; i++)
 //         {
@@ -80,7 +80,7 @@
 // Console.WriteLine("Введите размер массива: ");
 // int a = Convert.ToInt32(Console.ReadLine());
 // double[] num = new double[a];
-// FillArrayRandomNumbers(num);
+// FillArrayRandomnum(num);
 // Console.WriteLine("Массив: ");
 // PrintArray(num);
 // double min = Int32.MaxValue;
@@ -102,7 +102,7 @@
 // Console.WriteLine($"Максимальное значение: {max}, минимальное значение: {min}");
 // Console.WriteLine($"Разница между {max} и {min}, составляет: {max - min}");
 
-// void FillArrayRandomNumbers(double[] num)
+// void FillArrayRandomnum(double[] num)
 // {
 //     for(int i = 0; i < num.Length; i++)
 //         {
@@ -156,3 +156,74 @@
 // y = Math.Round(y, 3);
  
 // Console.WriteLine($"Пересечение в точке: ({x};{y})");
+
+// Задача 47. Задайте двумерный массив размером m×n, заполненный 
+// случайными вещественными числами.
+
+// Console.Write("Введите количество строк: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// double[,] num = new double[m, n];
+// FillArrayRandomnum(num);
+// PrintArray(num);
+
+// void FillArrayRandomnum(double[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = Convert.ToDouble(new Random().Next(-100, 100)) / 10;
+//         }
+//     }
+// }
+
+// void PrintArray(double[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         Console.Write("[ ");
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.Write("]");
+//         Console.WriteLine("");
+//     }
+// }
+
+// Задача 50. Напишите программу, которая на вход принимает позиции элемента в
+// двумерном массиве, и возвращает значение этого элемента или же указание, 
+// что такого элемента нет.
+
+// Console.Write("Введите строку: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите столбец:");
+// int b = Convert.ToInt32(Console.ReadLine()) - 1;
+// int n = 3; 
+// int m = 3; 
+// Random random = new Random();
+// int[,] arr = new int[n, m];
+// Console.WriteLine("Исходный массив:");
+// for (int i = 0; i < arr.GetLength(0); i++)
+// {
+//   for (int j = 0; j < arr.GetLength(1); j++)
+//   {
+//     arr[i, j] = random.Next(0, 9);
+//     Console.Write("{0} ", arr[i, j]);
+//   }
+//   Console.WriteLine(); }
+//   if (a < 0 | a > arr.GetLength(0) - 1 | b < 0 | b > arr.GetLength(1))
+//   {
+//     Console.WriteLine("Элемент не существует");
+//   }
+//   else
+//   {
+//   Console.WriteLine("Значение элемента массива = {0}", arr[a, b]);
+//   }
+// Console.ReadLine();
+
+
+
+
