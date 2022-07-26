@@ -198,9 +198,9 @@
 // что такого элемента нет.
 
 // Console.Write("Введите строку: ");
-// int a = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите столбец:");
-// int b = Convert.ToInt32(Console.ReadLine()) - 1;
+// int a = Convert.ToInt32(Console.ReadLine())-1;
+// Console.Write("Введите столбец: ");
+// int b = Convert.ToInt32(Console.ReadLine())-1;
 // int n = 3; 
 // int m = 3; 
 // Random random = new Random();
@@ -214,7 +214,7 @@
 //     Console.Write("{0} ", arr[i, j]);
 //   }
 //   Console.WriteLine(); }
-//   if (a < 0 | a > arr.GetLength(0) - 1 | b < 0 | b > arr.GetLength(1))
+//   if (a < 0 | a > arr.GetLength(0) | b < 0 | b > arr.GetLength(1))
 //   {
 //     Console.WriteLine("Элемент не существует");
 //   }
@@ -224,6 +224,55 @@
 //   }
 // Console.ReadLine();
 
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее
+// арифметическое элементов в каждом столбце.
 
+// Random random = new Random();
+// int[,] arr = new int[4, 4];
+// for (int i = 0; i < 4; i++)
+// {
+//     for (int j = 0; j < 4; j++)
+//     {
+//         arr[i, j] = random.Next(1, 10);
+//         Console.Write(arr[i, j] + "  ");
+//     }
+//     Console.WriteLine();
+// }
+// Console.WriteLine("-----------");
 
+// for (int j = 0; j < 4; j++)
+// {
+//     double sum = 0;
+//     for (int i = 0; i < 4; i++)
+//     {
+//         sum += arr[i, j];
+//     }
+//     Console.Write($" { sum / 4} " + "|" );
+// }
+// Console.ReadLine();
 
+// # 50 -вариант с рандомом столбцов
+
+// Random random = new Random();
+// int[,] arr = new int[random.Next(1, 10), random.Next(1, 10)];
+// for (int i = 0; i < arr.GetLength(0); i++)
+// {
+//     for (int j = 0; j < arr.GetLength(1); j++)
+//     {
+//         arr[i, j] = random.Next(1, 10);
+//         Console.Write(arr[i, j] + " ");
+//     }
+//     Console.WriteLine();
+// }
+// Console.WriteLine("---------------------------");
+// Console.WriteLine(arr.GetLength(0));
+// for (int j = 0; j < arr.GetLength(1); j++)
+// {
+//     double sum = 0;
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         sum += arr[i, j];
+//     }
+//     Console.Write($"{ sum / arr.GetLength(0)} ");
+// }
+// Console.ReadLine();
