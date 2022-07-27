@@ -276,3 +276,62 @@
 //     Console.Write($"{ sum / arr.GetLength(0)} ");
 // }
 // Console.ReadLine();
+
+
+Random r = new Random();
+int[,] mass = new int[4,3];
+            
+for (int i = 0; i < mass.GetLength(0); i++)//заполняем массив
+   {
+    for (int j = 0; j < mass.GetLength(1); j++)
+        {
+         mass[i, j] = r.Next(1, 10);
+         }
+ 
+    }
+Console.WriteLine("введите вариант сортировки!\n u убывание\n v возрастание");
+            
+            // switch(Console.ReadLine())
+            // {
+            //     case "u":mass=SortUbiv(mass);
+            //         break;
+            //     case "v":mass=SortVozrast(mass);
+            //         break;
+            // }
+            
+        //     foreach (int a in mass)
+        //     {
+        //         Console.WriteLine(a);
+        //     }
+        //     Console.ReadKey();
+            
+        // }
+ 
+        // static int[,] SortVozrast(int[,] x)
+        // {
+        //     int minVal = x[0,0];
+        //         for (int i = 0; i < x.GetLength(0); i++)// перечисление строк
+        //         {
+        //             for (int j = 0; j < x.GetLength(1); j++)// перечисление символов(столбцов)
+        //             {
+        //                 for (int q = i; q < x.GetLength(0); q++)//перечесления строк для проверки
+        //                 {
+        //                     for ( int w =(q==i)?j:0; w < x.GetLength(1); w++)   // перечесление смиволов для проверки (исключаем проверенные и заменннеые символы)
+        //                     {
+ 
+        //                         if (x[i, j] > x[q, w])
+        //                         {
+        //                             minVal = x[q, w];
+        //                             x[q, w] = x[i, j];
+        //                             x[i, j] = minVal;
+        //                         }
+ 
+        //                     }
+        //                 }
+                        
+        //             }
+        //         }
+            
+        //         return x;
+    
+   
