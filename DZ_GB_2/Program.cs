@@ -277,61 +277,166 @@
 // }
 // Console.ReadLine();
 
+// Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит 
+// по убыванию элементы каждой строки двумерного массива.
 
-Random r = new Random();
-int[,] mass = new int[4,3];
-            
-for (int i = 0; i < mass.GetLength(0); i++)//заполняем массив
-   {
-    for (int j = 0; j < mass.GetLength(1); j++)
-        {
-         mass[i, j] = r.Next(1, 10);
-         }
- 
-    }
-Console.WriteLine("введите вариант сортировки!\n u убывание\n v возрастание");
-            
-            // switch(Console.ReadLine())
-            // {
-            //     case "u":mass=SortUbiv(mass);
-            //         break;
-            //     case "v":mass=SortVozrast(mass);
-            //         break;
-            // }
-            
-        //     foreach (int a in mass)
-        //     {
-        //         Console.WriteLine(a);
-        //     }
-        //     Console.ReadKey();
-            
-        // }
- 
-        // static int[,] SortVozrast(int[,] x)
-        // {
-        //     int minVal = x[0,0];
-        //         for (int i = 0; i < x.GetLength(0); i++)// перечисление строк
-        //         {
-        //             for (int j = 0; j < x.GetLength(1); j++)// перечисление символов(столбцов)
-        //             {
-        //                 for (int q = i; q < x.GetLength(0); q++)//перечесления строк для проверки
-        //                 {
-        //                     for ( int w =(q==i)?j:0; w < x.GetLength(1); w++)   // перечесление смиволов для проверки (исключаем проверенные и заменннеые символы)
-        //                     {
- 
-        //                         if (x[i, j] > x[q, w])
-        //                         {
-        //                             minVal = x[q, w];
-        //                             x[q, w] = x[i, j];
-        //                             x[i, j] = minVal;
-        //                         }
- 
-        //                     }
-        //                 }
-                        
-        //             }
-        //         }
-            
-        //         return x;
+// int[,] num = new int[3, 4];
+// FillArrayRandomnum(num);
+// Console.WriteLine();
+// PrintArray(num);
+// for (int i = 0; i < num.GetLength(0); i++)
+// {
+//     for (int j = 0; j < num.GetLength(1) - 1; j++)
+//     {
+//         for (int z = 0; z < num.GetLength(1) - 1; z++)
+//         {
+//             if (num[i, z] < num[i, z + 1]) 
+//             {
+//                 int temp = 0;
+//                 temp = num[i, z];
+//                 num[i, z] = num[i, z + 1];
+//                 num[i, z + 1] = temp;
+//             }
+//         }
+//     }
+// }
+// Console.WriteLine("-------------");
+
+// PrintArray(num);
+
+// void FillArrayRandomnum(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(0, 10);
+//         }
+//     }
+// }
+
+// void PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         Console.Write("[ ");
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.Write("]");
+//         Console.WriteLine("");
+//     }
+// }
     
-   
+    // ###Задача 52 с вводимыми данными столбцов 
+
+// Console.WriteLine("введите количество строк");
+// int linesVol = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("введите количество столбцов");
+// int columnsVol = Convert.ToInt32(Console.ReadLine());
+// int[,] numbers = new int[linesVol, columnsVol];
+// FillArrayRandomNumbers(numbers);
+// Console.WriteLine();
+// Console.WriteLine("Массив до изменения");
+// PrintArray(numbers);
+
+// for (int i = 0; i < numbers.GetLength(0); i++)
+// {
+//     for (int j = 0; j < numbers.GetLength(1) - 1; j++)
+//     {
+//         for (int z = 0; z < numbers.GetLength(1) - 1; z++)
+//         {
+//             if (numbers[i, z] < numbers[i, z + 1]) //для изменения сортировки поменять знак < на противоположный
+//             {
+//                 int temp = 0;
+//                 temp = numbers[i, z];
+//                 numbers[i, z] = numbers[i, z + 1];
+//                 numbers[i, z + 1] = temp;
+//             }
+//         }
+//     }
+// }
+// Console.WriteLine();
+// Console.WriteLine("Массив с упорядоченными значениями");
+// PrintArray(numbers);
+
+// void FillArrayRandomNumbers(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(0, 10);
+//         }
+//     }
+// }
+
+// void PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         Console.Write("[ ");
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.Write("]");
+//         Console.WriteLine("");
+//     }
+// }
+
+// Задача 58: Задайте две матрицы. Напишите программу, которая будет находить
+// произведение двух матриц.
+
+int InputInt(string output)
+{
+    Console.Write(output);
+    return int.Parse(Console.ReadLine());
+}
+void FillArrayRandomNumbers(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(1, 9);
+        }
+    }
+}
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        Console.Write("[ ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.Write("]");
+        Console.WriteLine("");
+    }
+}
+int size = InputInt("Размерность матриц: ");
+int[,] a = new int[size, size];
+int[,] b = new int[size, size];
+FillArrayRandomNumbers(a);
+FillArrayRandomNumbers(b);
+int[,] c = new int[size, size];
+
+for (int i = 0; i < size; i++)
+{
+    for (int j = 0; j < size; j++)
+    {
+       c[i, j] = (a[i, j] * b[i, j]);
+    }
+}
+Console.WriteLine("Матрица 1:");
+PrintArray(a);
+Console.WriteLine();
+Console.WriteLine("Матрица 2:");
+PrintArray(b);
+Console.WriteLine();
+Console.WriteLine("Их произведение будет равно следующему массиву:");
+PrintArray(c);
+
