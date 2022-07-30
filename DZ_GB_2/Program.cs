@@ -389,54 +389,106 @@
 // Задача 58: Задайте две матрицы. Напишите программу, которая будет находить
 // произведение двух матриц.
 
-int InputInt(string output)
-{
-    Console.Write(output);
-    return int.Parse(Console.ReadLine());
-}
-void FillArrayRandomNumbers(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            array[i, j] = new Random().Next(1, 9);
-        }
-    }
-}
-void PrintArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        Console.Write("[ ");
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write(array[i, j] + " ");
-        }
-        Console.Write("]");
-        Console.WriteLine("");
-    }
-}
-int size = InputInt("Размерность матриц: ");
-int[,] a = new int[size, size];
-int[,] b = new int[size, size];
-FillArrayRandomNumbers(a);
-FillArrayRandomNumbers(b);
-int[,] c = new int[size, size];
+// int InputInt(string output)
+// {
+//     Console.Write(output);
+//     return int.Parse(Console.ReadLine());
+// }
+// void FillArrayRandomNumbers(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 9);
+//         }
+//     }
+// }
+// void PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         Console.Write("[ ");
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.Write("]");
+//         Console.WriteLine("");
+//     }
+// }
+// int size = InputInt("Размерность матриц: ");
+// int[,] a = new int[size, size];
+// int[,] b = new int[size, size];
+// FillArrayRandomNumbers(a);
+// FillArrayRandomNumbers(b);
+// int[,] c = new int[size, size];
 
-for (int i = 0; i < size; i++)
-{
-    for (int j = 0; j < size; j++)
-    {
-       c[i, j] = (a[i, j] * b[i, j]);
-    }
-}
-Console.WriteLine("Матрица 1:");
-PrintArray(a);
-Console.WriteLine();
-Console.WriteLine("Матрица 2:");
-PrintArray(b);
-Console.WriteLine();
-Console.WriteLine("Их произведение будет равно следующему массиву:");
-PrintArray(c);
+// for (int i = 0; i < size; i++)
+// {
+//     for (int j = 0; j < size; j++)
+//     {
+//        c[i, j] = (a[i, j] * b[i, j]);
+//     }
+// }
+// Console.WriteLine("Матрица 1:");
+// PrintArray(a);
+// Console.WriteLine();
+// Console.WriteLine("Матрица 2:");
+// PrintArray(b);
+// Console.WriteLine();
+// Console.WriteLine("Их произведение будет равно следующему массиву:");
+// PrintArray(c);
+
+// Задача 64: Задайте значения M и N. Напишите программу, которая выведет все
+// натуральные числа в промежутке от M до N.
+
+// Console.Write("Введите число 1: ");
+// int M = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число 2: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"M= {M}; N= {N}" );
+// if (M>N)
+// for (int i = N; i <= M; i++)
+//     Console.Write($" {i}");
+// else
+//     for (int i = M; i <= N; i++)
+//         Console.Write($" {i}" +",");
+// Console.WriteLine();
+
+// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму 
+// натуральных элементов в промежутке от M до N.
+
+// Console.Write("Введите число 1: ");
+// int M = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число 2: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"M= {M}; N= {N}" );
+// int sum = 0;
+// for (int i = M; i <= N; i++)
+//     sum += i;
+// Console.WriteLine($"Cумма натуральных элементов от {M} до {N} = {sum}");
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. 
+// Даны два неотрицательных числа m и n.
+
+// Console.Write("Введите число m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int fA = A(m, n);
+
+// Console.Write($"Функция Аккермана = {fA} ");
+
+// int A(int m, int n)
+// {
+//   if (m == 0) 
+//      return n + 1;
+//   else 
+//     if ((m!= 0) && (n==0)) 
+//     return A(m - 1, 1);
+//   else 
+//     return A(m - 1, A(m, n - 1));
+// }
+// Console.WriteLine();
 
